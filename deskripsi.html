@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#cd6d87">
+<title>Deskripsi Tiket — She Runs The World 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#cd6d87;--pink-deep:#b04a68;--pink-tab:#c05c78;--olive:#a8a76a}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:#e9e2da}
+body{font-family:'Poppins',sans-serif;color:#2e2e2e;background:#fff;max-width:520px;margin:0 auto;min-height:100vh;box-shadow:0 0 26px rgba(0,0,0,.12)}
+button{font-family:inherit;cursor:pointer}
+a{text-decoration:none}
+img{display:block}
+.topbar{position:sticky;top:0;z-index:50;background:var(--pink);display:flex;align-items:center;padding:10px 14px;gap:6px}
+.back{background:none;border:0;color:#fff;font-size:26px;line-height:1;padding:2px 6px 2px 0}
+.navlogo{height:56px;width:auto;object-fit:contain}
+.brand-txt{display:none;flex-direction:column;line-height:.95}
+.brand-txt .b1{font-family:'Baloo 2';font-weight:800;font-size:19px;color:#d76d95;text-shadow:-1.5px -1.5px 0 #fff,1.5px -1.5px 0 #fff,-1.5px 1.5px 0 #fff,1.5px 1.5px 0 #fff}
+.yr{font-size:8.5px;background:#fff;color:#d76d95;padding:1px 4px;border-radius:4px;margin-left:3px}
+.brand-txt .b2{font-family:'Baloo 2';font-weight:800;font-size:22px;color:#a8a44e;margin-top:-3px;text-shadow:-1.5px -1.5px 0 #fff,1.5px -1.5px 0 #fff,-1.5px 1.5px 0 #fff,1.5px 1.5px 0 #fff}
+.brand-txt .b3{font-size:6.5px;letter-spacing:3px;color:#6f2f47;margin-top:3px;text-align:center;font-weight:600}
+.nav-icons{margin-left:auto;display:flex;gap:14px;align-items:center}
+.nav-icons button{background:none;border:0;padding:2px}
+.nav-icons svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.titlebar{background:linear-gradient(180deg,#a8a76a,#8f8e55);color:#fff;font-family:'Baloo 2';font-weight:800;font-size:20px;letter-spacing:1.5px;text-align:center;padding:9px 10px;text-transform:uppercase}
+.carousel{position:relative;overflow:hidden;background:repeating-linear-gradient(45deg,#fbdde7 0 14px,#f7cfdd 14px 28px);touch-action:pan-y}
+.carousel.y10{background:repeating-linear-gradient(45deg,#f6f3d8 0 14px,#efebc6 14px 28px)}
+.track{display:flex;transition:transform .35s ease}
+.slide{flex:0 0 100%;min-height:410px;display:flex;align-items:center;justify-content:center;padding:28px 20px}
+.slide img.ph{max-width:100%;max-height:380px;object-fit:contain}
+.cnav{position:absolute;top:45%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.9);color:var(--pink-deep);font-size:20px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.2);z-index:5}
+.cnav.prev{left:10px}.cnav.next{right:10px}
+.strip{background:#fff;padding:12px 0 6px;display:flex;justify-content:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:#d9d9d9;border:0;padding:0;transition:.2s}
+.dot.on{background:var(--olive);transform:scale(1.3)}
+.art{display:flex;flex-direction:column;align-items:center;gap:30px;width:100%}
+.ahead{display:flex;align-items:flex-start;gap:12px}
+.ahead .big{font-family:'Baloo 2';font-weight:800;font-size:84px;line-height:.9;color:#ee9fba;text-shadow:3px 3px 0 rgba(255,255,255,.95),6px 7px 0 rgba(190,110,140,.18)}
+.ahead .side{font-family:'Baloo 2';font-weight:800;font-size:23px;line-height:1.08;color:#a8a44e;text-transform:uppercase;padding-top:10px}
+.ahead .side .p{color:#e58fb0}
+.ahead .side b{font-size:27px;display:block}
+.btk{display:flex;background:#fff;border-radius:16px;padding:5px;filter:drop-shadow(0 12px 14px rgba(150,90,110,.32))}
+.btk-main{width:196px;height:108px;border-radius:11px;background:linear-gradient(135deg,#f0c3d5 0%,#e6a8c2 55%,#e3b17e 135%);display:flex;align-items:center;justify-content:center}
+.btk-main img{height:76px;width:auto;object-fit:contain}
+.btk-main .fb{font-family:'Baloo 2';font-weight:800;font-size:26px;color:#fff;text-shadow:2px 2px 0 #d98aab}
+.btk-sep{border-left:2.5px dashed #e8a9c2;margin:8px 7px}
+.btk-stub{width:52px;height:108px;border-radius:0 11px 11px 0;background:linear-gradient(180deg,#dc8fae,#cf7fa2);display:flex;align-items:center;justify-content:center}
+.btk-stub span{writing-mode:vertical-rl;font-family:'Baloo 2';font-weight:800;font-size:15px;letter-spacing:1.5px;color:#fff}
+.content{padding:16px 16px 40px}
+.tg{display:inline-block;font-size:11.5px;font-weight:600;padding:5px 10px;border-radius:4px;margin:0 6px 8px 0}
+.tg.stock{color:#fff}
+.tg.stock.green{background:#2e7d32}
+.tg.stock.gray{background:#9e9e9e}
+.tg.digital{background:var(--pink-tab);color:#fff}
+.tg.cat{background:#fbe3ec;color:var(--pink-deep);border:1px solid #f0c4d6}
+.content h1{font-size:22px;font-weight:600;line-height:1.4;color:#222;margin-top:4px}
+.pricerow{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+.price{font-size:22px;font-weight:700;color:var(--olive)}
+.heart{background:none;border:0;padding:4px}
+.heart svg{width:26px;height:26px;stroke:var(--pink-deep);fill:none;stroke-width:1.8}
+.heart.active svg{fill:#e0447a;stroke:#e0447a}
+.qtybox{border:1px solid #e6e6e6;border-radius:12px;padding:14px;margin-top:18px}
+.qhead{font-weight:700;font-size:14px}
+.qrow{display:flex;align-items:center;justify-content:space-between;margin-top:10px;font-size:13px;color:#777}
+.stepper{display:flex;align-items:center;gap:10px}
+.stepper button{width:34px;height:34px;border-radius:50%;border:2px solid var(--olive);background:#fff;color:#6f6e3c;font-size:18px;font-weight:700;line-height:1}
+.stepper button:active{transform:scale(.92)}
+.stepper .qv{font-size:16px;font-weight:700;color:#222;min-width:28px;text-align:center}
+.buyrow{display:flex;align-items:center;gap:14px;margin-top:24px}
+.binfo{flex:1}
+.bname{font-weight:700;font-size:15px;line-height:1.4}
+.bweight{font-size:12px;color:#999;margin-top:3px}
+.bprice{font-size:14px;margin-top:3px}
+.bstock{font-size:12.5px}
+.bstock.green{color:#2e7d32}.bstock.gray{color:#9e9e9e}
+.beli{border:2px solid var(--olive);color:#6f6e3c;background:#fff;border-radius:24px;padding:11px 30px;font-size:15px;font-weight:600}
+.beli:hover{background:#f6f6e8}
+.beli:active{transform:scale(.95)}
+.desc{margin-top:30px}
+.desc h2{font-size:16px;font-weight:700;color:#222}
+.desc h3{font-size:15px;font-weight:700;margin:20px 0 8px;color:#222}
+.desc p{font-size:13.5px;line-height:1.85;color:#444;margin-bottom:6px}
+.desc ul{padding-left:20px;margin-bottom:8px}
+.desc li{font-size:13.5px;line-height:1.85;color:#444}
+.contact{width:100%;margin-top:28px;border:2px solid var(--pink-tab);background:#fff;color:var(--pink-deep);border-radius:26px;padding:14px;font-weight:700;font-size:13.5px}
+.contact:hover{background:#fbeef3}
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(90px);background:#222;color:#fff;padding:11px 18px;border-radius:24px;font-size:13px;z-index:95;opacity:0;transition:.3s;max-width:88%;text-align:center}
+#toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <button class="back" onclick="location.href='index.html'" aria-label="Kembali">←</button>
+  <a href="index.html">
+    <img src="navbar1.png" alt="She Runs The World 2026 by HeyLocal" class="navlogo"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <span class="brand-txt">
+      <span class="b1">She Runs<span class="yr">2026</span></span>
+      <span class="b2">the World</span>
+      <span class="b3">BY HEYLOCAL</span>
+    </span>
+  </a>
+  <div class="nav-icons">
+    <button onclick="location.href='index.html#tiket'" aria-label="Cari"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></button>
+    <button onclick="toast('Keranjang kosong — silakan pilih tiket.')" aria-label="Keranjang"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1.2 12H7.2L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></button>
+    <button onclick="toast('Fitur akun segera hadir.')" aria-label="Akun"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></button>
+  </div>
+</div>
+
+<div class="titlebar" id="titlebar">PRESALE 2 SRTW</div>
+
+<div class="carousel" id="carousel">
+  <div class="track" id="track"></div>
+  <button class="cnav prev" onclick="move(-1)" aria-label="Sebelumnya">‹</button>
+  <button class="cnav next" onclick="move(1)" aria-label="Berikutnya">›</button>
+</div>
+<div class="strip" id="dots"></div>
+
+<div class="content">
+  <div>
+    <span class="tg stock" id="tgStock"></span>
+    <span class="tg digital">Produk Digital</span>
+  </div>
+  <div>
+    <span class="tg cat" id="tgCat1"></span>
+    <span class="tg cat" id="tgCity"></span>
+  </div>
+
+  <h1 id="dTitle"></h1>
+  <div class="pricerow">
+    <span class="price" id="dPrice"></span>
+    <button class="heart" id="heartBtn" aria-label="Favorit">
+      <svg viewBox="0 0 24 24"><path d="M12 20.5S4.5 15.6 3.2 11.4C2.3 8.5 4.2 6 6.9 6c1.9 0 3.3 1 4.1 2.4h2C13.8 7 15.2 6 17.1 6c2.7 0 4.6 2.5 3.7 5.4C19.5 15.6 12 20.5 12 20.5z"/></svg>
+    </button>
+  </div>
+
+  <div class="qtybox">
+    <div class="qhead">Informasi Jumlah</div>
+    <div class="qrow">
+      <span>Jumlah Maksimal: <b id="qMax"></b></span>
+      <div class="stepper">
+        <button id="qMinus" aria-label="Kurangi">−</button>
+        <span class="qv" id="qVal">1</span>
+        <button id="qPlus" aria-label="Tambah">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="buyrow">
+    <div class="binfo">
+      <div class="bname" id="bName"></div>
+      <div class="bweight">Berat 500 g</div>
+      <div class="bprice"><span id="bPrice"></span> <span class="bstock" id="bStock"></span></div>
+    </div>
+    <button class="beli" id="beliBtn">Beli</button>
+  </div>
+
+  <div class="desc">
+    <h2>SHE RUNS THE WORLD</h2>
+
+    <h3>1. SRTW 2026 RACEPACK TOTEBAG</h3>
+    <p><b>Material:</b> Cordura</p>
+    <p><b>Fitur:</b></p>
+    <ul>
+      <li>Memiliki 1 kompartemen utama yang luas</li>
+      <li>Memiliki strap bahu</li>
+      <li>Dilengkapi dengan sablon logo SRTW</li>
+    </ul>
+    <p><b>Overview:</b><br>
+    SRTW RACEPACK BAG memiliki desain totebag minimalis dengan kompartemen utama yang luas. Dilengkapi dengan strap bahu yang nyaman serta sablon SRTW pada bagian body depan.</p>
+    <p><b>Size Chart:</b><br>
+    Length: 30 cm<br>Width: 10 cm<br>Height: 19 cm<br>Strap: 58-96 cm</p>
+
+    <h3>2. Jersey SRTW (SPORT T-SHIRT)</h3>
+    <p><b>Material:</b> DRY FIT</p>
+    <p><b>Fitur:</b></p>
+    <ul>
+      <li>Kaos jersey dengan potongan regular</li>
+      <li>Lengan panjang raglan dengan detail tumbhole di bukaan tangannya</li>
+      <li>Terbuat dari bahan dry-fit ringan &amp; cepat kering untuk kenyamanan maksimal saat berlari</li>
+      <li>Teknologi dry-fit yang adem, elastis, dan anti-gerah</li>
+      <li>Kaos running breathable, menyerap keringat &amp; tetap segar sepanjang lari</li>
+      <li>Ringan, fleksibel, dan cepat kering</li>
+    </ul>
+    <p><b>Size Chart:</b><br>
+    <b>Lingkar Dada x Panjang Badan Depan x Panjang Badan Belakang x Panjang Lengan</b><br>
+    S&nbsp;: 88cm x 65cm x 70cm x 70cm<br>
+    M&nbsp;: 96cm x 67cm x 72cm x 71cm<br>
+    L&nbsp;: 104cm x 68cm x 74cm x 71cm<br>
+    XL : 112cm x 70cm x 76cm x 71cm<br>
+    2XL: 120cm x 70cm x 76cm x 72cm<br>
+    3XL: 128cm x 70cm x 76cm x 72cm</p>
+
+    <h3>3. Hijab SRTW</h3>
+    <p><b>Material:</b> Rayon Spandex</p>
+    <p><b>Fitur:</b></p>
+    <ul>
+      <li>Material bahan rayon spandex yang dingin lembut dan halus</li>
+      <li>Dilengkapi dengan tali bandana sebagai pengikat</li>
+      <li>Model bergo instant</li>
+    </ul>
+    <p><b>Size Chart:</b><br>
+    <b>Panjang depan (bawah dagu) x Panjang belakang</b><br>
+    All Size : 40cm x 65 cm</p>
+
+    <h3>4. Medali SRTW Heylocal</h3>
+    <p><b>Material:</b> Logam Alloy &amp; Tali Tissue</p>
+    <p><b>Dimensi Medali:</b><br>
+    Medal diameter size: 7,5cm<br>
+    Lanyard 100cm x 2cm</p>
+    <p><b>Fitur:</b><br>
+    Medali She Runs The World 2026 ini dirancang dengan bentuk bunga yang elegan, mencerminkan sisi feminin namun kuat dari setiap peserta. Bagian tengahnya dilengkapi spinning badge yang bisa berputar, sekaligus menjadi penanda apakah kamu finisher 5K atau 10K. Setiap putarannya mengingatkan pada perjalanan dan usaha yang telah dilalui dari start hingga finish. Dengan sentuhan desain yang apik dan lanyard bertema, medali ini adalah hasil dari perjuangan yang telah kamu tempuh hingga garis finish. Lebih dari sekadar penghargaan, ini adalah bukti nyata bahwa kamu telah menjadi bagian dari gerakan perempuan yang menginspirasi.</p>
+
+    <h3>5. Sticker SRTW 2026</h3>
+    <p><b>Material:</b> Kertas Vinyl</p>
+    <p><b>Fitur:</b><br>
+    Sticker She Runs The World 2026 dirancang sebagai rangkaian elemen visual yang merayakan semangat, perjalanan, dan keberanian setiap perempuan untuk terus bergerak maju. Mengangkat identitas She Runs The World, setiap sticker hadir dengan elemen khas seperti garis finish, medal, hingga berbagai statement yang merepresentasikan momen dari perjalanan menuju garis finish. Perpaduan warna feminin dengan aksen sporty memberikan karakter yang playful, dan energetic. Lebih dari sekadar dekorasi, sticker ini menjadi bagian kecil dari perayaan atas setiap langkah, usaha, dan pencapaian dalam menjadi bagian dari She Runs The World 2026.</p>
+    <p><b>Size Chart:</b> 14,8 cm x 21 cm</p>
+  </div>
+
+  <button class="contact" onclick="location.href='mailto:hello@heylocal.id?subject=She%20Runs%20The%20World%202026'">💬 Kirim Pesan ke She Runs The World?</button>
+</div>
+
+<div id="toast"></div>
+
+<script>
+/* ================= DATA (sinkron dengan index & form) ================= */
+const CITY_DEF=[
+ {city:"JAKARTA",  stock:4, img5k:"poster5k.jpg",   img10k:null},
+ {city:"BANDUNG",  stock:4, img5k:null,             img10k:null},
+ {city:"JOGJA",    stock:2, img5k:null,             img10k:null},
+ {city:"SEMARANG", stock:4, img5k:"semarang5k.png", img10k:"semarang10k.png"}
+];
+const P5=[369000,1089000,1799000], P10=[419000,1239000,2077000];
+const PRODUCTS={};
+CITY_DEF.forEach(cd=>{
+  const pre=cd.city.slice(0,3).toLowerCase();
+  [1,3,5].forEach((q,j)=>{
+    PRODUCTS[pre+"5"+q]={id:pre+"5"+q,city:cd.city,cat:"5k",qty:q,label:"5K FUN RUN",
+      title:`PRESALE 2 SRTW 5K RUN${q>1?" BUNDLING "+q+" TICKET":""} (${cd.city})`,
+      price:P5[j],stock:cd.stock,img:cd.img5k};
+    PRODUCTS[pre+"10"+q]={id:pre+"10"+q,city:cd.city,cat:"10k",qty:q,label:"10K RACE",
+      title:`PRESALE 2 SRTW 10K RUN${q>1?" BUNDLING "+q+" TICKET":""} (${cd.city})`,
+      price:P10[j],stock:cd.stock,img:cd.img10k};
+  });
+});
+const fmt=n=>"Rp "+n.toLocaleString("en-US");
+let p=JSON.parse(localStorage.getItem("srtw_product"));
+if(!p||!PRODUCTS[p.id]) p=PRODUCTS["jak51"]; /* default: Jakarta 5K 1 person */
+let qty=1, maxQty=p.stock||4;
+
+/* ================= ISI TEKS ================= */
+document.getElementById("titlebar").textContent="PRESALE 2 SRTW "+p.city;
+document.getElementById("dTitle").textContent=p.title;
+document.getElementById("dPrice").textContent=fmt(p.price);
+document.getElementById("bName").textContent=p.title;
+document.getElementById("tgStock").textContent=p.stock<=2?"STOK MENIPIS":"Stok tersedia "+p.stock;
+document.getElementById("tgStock").classList.add(p.stock<=2?"gray":"green");
+document.getElementById("tgCat1").textContent=(p.cat==="5k")?(p.city+" 5K FUNRUN"):(p.city+" 10K RUN");
+document.getElementById("tgCity").textContent=p.city;
+document.getElementById("qMax").textContent=maxQty;
+const bs=document.getElementById("bStock");
+bs.textContent="("+(p.stock<=2?"Stok menipis "+p.stock:"Stok tersedia "+p.stock)+")";
+bs.classList.add(p.stock<=2?"gray":"green");
+if(p.cat==="10k") document.getElementById("carousel").classList.add("y10");
+
+/* ================= CAROUSEL ================= */
+const track=document.getElementById("track"),dotsEl=document.getElementById("dots"),
+      carEl=document.getElementById("carousel");
+let slides=[],idx=0;
+
+function artSlide(){
+  const is10=p.cat==="10k";
+  const big=is10?"10K":"5K";
+  const side=is10?`<span class="p">RAGE</span> REGULAR<b>${p.qty} PERSON</b>`
+                :`FUN RUN<br>REGULAR<b>${p.qty} PERSON</b>`;
+  const stub=is10?"10K RACE":"5K FUNRUN";
+  let tks="";
+  for(let i=0;i<p.qty;i++){
+    const st=p.qty===1?"transform:rotate(-8deg)"
+      :`margin:${i?"-78px 0 0 "+(12+i*18)+"px":"0"};transform:rotate(${-12+i*8}deg)`;
+    tks+=`<div class="btk" style="${st}">
+      <div class="btk-main"><img src="logo1.png" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="fb" style="display:none">SRTW</span></div>
+      <div class="btk-sep"></div>
+      <div class="btk-stub"><span>${stub}</span></div></div>`;
+  }
+  return `<div class="art">
+    <div class="ahead"><span class="big">${big}</span><span class="side">${side}</span></div>
+    <div style="display:flex;flex-direction:column;align-items:center;padding-left:${p.qty>1?p.qty*10:0}px">${tks}</div>
+  </div>`;
+}
+function build(){
+  slides=[];
+  if(p.img) slides.push(`<img class="ph" src="${p.img}" alt="${p.title}" onerror="this.remove()">`);
+  slides.push(artSlide());
+  slides.push(`<img class="ph" src="logo1.png" alt="She Runs The World 2026" onerror="this.style.display='none'">`);
+  track.innerHTML=slides.map(s=>`<div class="slide">${s}</div>`).join("");
+  dotsEl.innerHTML=slides.map((_,i)=>`<button class="dot${i===0?" on":""}" onclick="goTo(${i})" aria-label="Slide ${i+1}"></button>`).join("");
+  idx=0; apply();
+}
+function apply(){track.style.transform=`translateX(-${idx*100}%)`;
+  dotsEl.querySelectorAll(".dot").forEach((d,i)=>d.classList.toggle("on",i===idx));}
+function move(d){idx=(idx+d+slides.length)%slides.length;apply();}
+function goTo(i){idx=i;apply();}
+build();
+
+let sx=0,dx=0;
+carEl.addEventListener("touchstart",e=>{sx=e.touches[0].clientX;dx=0;},{passive:true});
+carEl.addEventListener("touchmove",e=>{dx=e.touches[0].clientX-sx;},{passive:true});
+carEl.addEventListener("touchend",()=>{if(Math.abs(dx)>40)move(dx<0?1:-1);});
+document.addEventListener("keydown",e=>{
+  if(e.key==="ArrowLeft")move(-1);
+  if(e.key==="ArrowRight")move(1);
+});
+
+/* ================= JUMLAH & HARGA ================= */
+const qVal=document.getElementById("qVal"),bPrice=document.getElementById("bPrice");
+function refreshQty(){qVal.textContent=qty;bPrice.textContent=fmt(p.price*qty);}
+document.getElementById("qMinus").onclick=()=>{if(qty>1){qty--;refreshQty();}else toast("Minimal 1 tiket.");};
+document.getElementById("qPlus").onclick=()=>{if(qty<maxQty){qty++;refreshQty();}else toast("Jumlah maksimal "+maxQty+".");};
+refreshQty();
+
+/* ================= AKSI TOMBOL ================= */
+document.getElementById("beliBtn").onclick=()=>{
+  localStorage.setItem("srtw_product",JSON.stringify({...p,qtyOrder:qty}));
+  location.href="halamantarian.html";
+};
+document.getElementById("heartBtn").onclick=function(){
+  this.classList.toggle("active");
+  toast(this.classList.contains("active")?"Ditambahkan ke favorit ❤":"Dihapus dari favorit");
+};
+let toastTimer;
+function toast(m){const t=document.getElementById("toast");t.textContent=m;
+  t.classList.add("show");clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>t.classList.remove("show"),2400);}
+</script>
+</body>
+</html>
