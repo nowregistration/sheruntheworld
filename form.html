@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#cd6d87">
+<title>Formulir Pendaftaran — She Runs The World 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#cd6d87;--pink-deep:#b04a68;--pink-tab:#c05c78}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:#e9e2da}
+body{font-family:'Poppins',sans-serif;color:#2e2e2e;background:#fff;max-width:520px;margin:0 auto;min-height:100vh;box-shadow:0 0 26px rgba(0,0,0,.12)}
+button{font-family:inherit;cursor:pointer}
+input,select{font-family:inherit}
+.navlogo{height:56px;width:auto;object-fit:contain}
+.brand-txt{display:none;flex-direction:column;line-height:.95}
+.brand-txt .b1{font-family:'Baloo 2';font-weight:800;font-size:19px;color:#d76d95;text-shadow:-1.5px -1.5px 0 #fff,1.5px -1.5px 0 #fff,-1.5px 1.5px 0 #fff,1.5px 1.5px 0 #fff}
+.yr{font-size:8.5px;background:#fff;color:#d76d95;padding:1px 4px;border-radius:4px;margin-left:3px}
+.brand-txt .b2{font-family:'Baloo 2';font-weight:800;font-size:22px;color:#a8a44e;margin-top:-3px;text-shadow:-1.5px -1.5px 0 #fff,1.5px -1.5px 0 #fff,-1.5px 1.5px 0 #fff,1.5px 1.5px 0 #fff}
+.brand-txt .b3{font-size:6.5px;letter-spacing:3px;color:#6f2f47;margin-top:3px;text-align:center;font-weight:600}
+.topbar{position:sticky;top:0;z-index:40;background:var(--pink);display:flex;align-items:center;padding:10px 14px;gap:8px}
+.back{background:none;border:0;color:#fff;font-size:26px;line-height:1;padding:2px 8px 2px 0}
+.steps{display:flex;gap:6px;padding:18px 16px 2px}
+.step{flex:1;text-align:center;font-size:10.5px;font-weight:600;color:#aaa}
+.step .dot{width:26px;height:26px;border-radius:50%;background:#e5e0da;color:#999;display:flex;align-items:center;justify-content:center;margin:0 auto 4px;font-size:12px}
+.step.on{color:var(--pink-deep)}
+.step.on .dot{background:var(--pink-tab);color:#fff}
+.form-wrap{padding:14px 16px 60px}
+.form-wrap h1{font-family:'Baloo 2';font-size:20px;color:var(--pink-deep);margin-bottom:14px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.field input,.field select{width:100%;padding:12px 14px;border:1.5px solid #ddd;border-radius:10px;font-size:14px;background:#fff}
+.field input:focus,.field select:focus{outline:none;border-color:var(--pink)}
+.agree{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:#555;margin:16px 0}
+.agree input{width:18px;height:18px;margin-top:1px;accent-color:var(--pink-tab)}
+.summary{background:#fbeef3;border:1.5px dashed var(--pink);border-radius:12px;padding:14px;margin:8px 0 18px}
+.summary .row{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:3px 0}
+.summary .row span:last-child{font-weight:600;text-align:right}
+.summary .total{display:flex;justify-content:space-between;font-weight:700;color:var(--pink-deep);font-size:15px;border-top:1px solid #eec4d3;margin-top:8px;padding-top:10px}
+h2.sec{font-family:'Baloo 2';font-size:17px;color:var(--pink-deep);margin:22px 0 10px;padding-top:16px;border-top:1px solid #f0e3e9}
+.qris-box{text-align:center;background:#fff;border:1.5px solid #eee;border-radius:14px;padding:18px;box-shadow:0 3px 10px rgba(0,0,0,.06)}
+.qris-box img{width:230px;max-width:100%;margin:0 auto;border:1px solid #eee;border-radius:8px}
+.qris-box p{font-size:12px;color:#888;margin-top:10px}
+.dl{display:inline-block;margin-top:10px;background:#fff;border:1.8px solid var(--pink-tab);color:var(--pink-deep);border-radius:22px;padding:9px 20px;font-weight:700;font-size:12.5px}
+.upload{display:block;text-align:center;border:2px dashed #d8aabb;border-radius:12px;padding:18px;font-size:13px;font-weight:600;color:var(--pink-deep);background:#fdf5f8;cursor:pointer}
+.upload:hover{background:#fbeef3}
+.fname{font-size:12px;color:#2e7d32;font-weight:600;margin-top:8px;min-height:16px}
+.btn{display:block;width:100%;border:0;border-radius:26px;padding:16px;font-size:14.5px;font-weight:700;letter-spacing:.4px;background:var(--pink-tab);color:#fff;box-shadow:0 4px 12px rgba(192,92,120,.35);margin-top:20px}
+.btn:active{transform:scale(.98)}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <button class="back" onclick="location.href='halamantarian.html'" aria-label="Kembali">←</button>
+  <a href="index.html">
+    <img src="navbar1.png" alt="She Runs The World 2026 by HeyLocal" class="navlogo"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <span class="brand-txt">
+      <span class="b1">She Runs<span class="yr">2026</span></span>
+      <span class="b2">the World</span>
+      <span class="b3">BY HEYLOCAL</span>
+    </span>
+  </a>
+</div>
+
+<div class="steps">
+  <div class="step on"><div class="dot">1</div>Data Diri</div>
+  <div class="step on"><div class="dot">2</div>Pembayaran QRIS</div>
+  <div class="step"><div class="dot">3</div>Selesai</div>
+</div>
+
+<form class="form-wrap" id="regForm">
+  <h1>Formulir Pendaftaran</h1>
+
+  <div class="field">
+    <label for="nama">Nama Lengkap *</label>
+    <input id="nama" name="nama" type="text" required minlength="3" placeholder="Sesuai KTP / identitas">
+  </div>
+  <div class="field">
+    <label for="email">Email *</label>
+    <input id="email" name="email" type="email" required placeholder="untuk pengiriman e-ticket">
+  </div>
+  <div class="field">
+    <label for="telp">No. HP / WhatsApp *</label>
+    <input id="telp" name="telp" type="tel" required pattern="[0-9]{9,14}" inputmode="numeric" placeholder="08xxxxxxxxxx" title="Isi 9–14 digit angka">
+  </div>
+  <div class="field">
+    <label for="kategori">Kategori Tiket *</label>
+    <select id="kategori" name="kategori" required></select>
+  </div>
+  <div class="field">
+    <label for="size">Ukuran Jersey *</label>
+    <select id="size" name="size" required>
+      <option value="">— Pilih ukuran —</option>
+      <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+    </select>
+  </div>
+
+  <div class="summary">
+    <div class="row"><span>Paket</span><span id="sumTitle">-</span></div>
+    <div class="row"><span>Harga tiket</span><span id="sumPrice">-</span></div>
+    <div class="row"><span>Jumlah</span><span id="sumQty">-</span></div>
+    <div class="row"><span>Biaya admin</span><span>Rp 0</span></div>
+    <div class="total"><span>Total Bayar</span><span id="sumTotal">-</span></div>
+  </div>
+
+  <label class="agree">
+    <input type="checkbox" required>
+    <span>Saya menyetujui syarat &amp; ketentuan event, serta memahami bahwa tiket yang sudah dibeli tidak dapat dibatalkan.</span>
+  </label>
+
+  <h2 class="sec">💳 Pembayaran — QRIS</h2>
+  <div class="qris-box">
+    <img src="qris1.png" alt="QRIS Pembayaran" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <p style="display:none;color:#b04a68">⚠️ File qris1.png tidak ditemukan di folder.</p>
+    <p>Scan QRIS di atas dengan aplikasi mobile banking / e-wallet apa pun.</p>
+    <a class="dl" href="qris1.png" download="QRIS-SRTW2026.png">⬇ Download QRIS</a>
+  </div>
+
+  <h2 class="sec">📎 Bukti Pembayaran</h2>
+  <label class="upload" for="bukti">Tap untuk upload bukti transfer (opsional)</label>
+  <input type="file" id="bukti" accept="image/*" hidden>
+  <div class="fname" id="fileName"></div>
+
+  <button class="btn" type="submit">KIRIM &amp; BAYAR SEKARANG</button>
+</form>
+
+<script>
+/* DATA sinkron dengan index & deskripsi */
+const CITY_DEF=[
+ {city:"JAKARTA",  img5k:"poster5k.jpg",   img10k:null},
+ {city:"BANDUNG",  img5k:null,             img10k:null},
+ {city:"JOGJA",    img5k:null,             img10k:null},
+ {city:"SEMARANG", img5k:"semarang5k.png", img10k:"semarang10k.png"}
+];
+const P5=[369000,1089000,1799000], P10=[419000,1239000,2077000];
+const PRODUCTS={};
+CITY_DEF.forEach(cd=>{
+  const pre=cd.city.slice(0,3).toLowerCase();
+  [1,3,5].forEach((q,j)=>{
+    PRODUCTS[pre+"5"+q]={id:pre+"5"+q,city:cd.city,cat:"5k",qty:q,label:"5K FUN RUN",
+      title:`PRESALE 2 SRTW 5K RUN${q>1?" BUNDLING "+q+" TICKET":""} (${cd.city})`,price:P5[j]};
+    PRODUCTS[pre+"10"+q]={id:pre+"10"+q,city:cd.city,cat:"10k",qty:q,label:"10K RACE",
+      title:`PRESALE 2 SRTW 10K RUN${q>1?" BUNDLING "+q+" TICKET":""} (${cd.city})`,price:P10[j]};
+  });
+});
+const fmt=n=>"Rp "+n.toLocaleString("en-US");
+const stored=JSON.parse(localStorage.getItem("srtw_product"));
+const qty=stored?Math.max(1,stored.qtyOrder||stored.qty||1):1;
+const sel=document.getElementById("kategori");
+
+const byCity={};
+Object.values(PRODUCTS).forEach(pr=>{(byCity[pr.city]=byCity[pr.city]||[]).push(pr)});
+Object.keys(byCity).forEach(city=>{
+  const og=document.createElement("optgroup"); og.label=city;
+  byCity[city].forEach(pr=>{
+    const o=document.createElement("option");
+    o.value=pr.id; o.textContent=`${pr.label} — ${pr.title} (${fmt(pr.price)})`;
+    og.appendChild(o);
+  });
+  sel.appendChild(og);
+});
+sel.value=(stored&&PRODUCTS[stored.id])?stored.id:"jak51";
+
+function updateSummary(){
+  const pr=PRODUCTS[sel.value];
+  document.getElementById("sumTitle").textContent=pr.title;
+  document.getElementById("sumPrice").textContent=fmt(pr.price);
+  document.getElementById("sumQty").textContent=qty+" tiket";
+  document.getElementById("sumTotal").textContent=fmt(pr.price*qty);
+}
+sel.addEventListener("change",updateSummary);
+updateSummary();
+
+document.getElementById("bukti").addEventListener("change",function(){
+  document.getElementById("fileName").textContent=this.files[0]?"✓ "+this.files[0].name:"";
+});
+
+document.getElementById("regForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const f=new FormData(this);
+  const pr=PRODUCTS[f.get("kategori")];
+  const bukti=document.getElementById("bukti").files[0];
+  const order={
+    id:"SRTW26-"+Math.random().toString(36).slice(2,8).toUpperCase(),
+    nama:f.get("nama").trim(), email:f.get("email").trim(), telp:f.get("telp"),
+    size:f.get("size"), bukti:bukti?bukti.name:"-",
+    prodId:pr.id, title:pr.title, city:pr.city, cat:pr.label,
+    qty:qty, price:pr.price, total:pr.price*qty,
+    date:new Date().toLocaleString("id-ID")
+  };
+  localStorage.setItem("srtw_order",JSON.stringify(order));
+  location.href="success.html";
+});
+</script>
+</body>
+</html>
