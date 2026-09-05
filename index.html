@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#cd6d87">
+<meta name="description" content="She Runs The World 2026 by HeyLocal — tiket 5K Fun Run & 10K Race di Jakarta, Bandung, Jogja, Semarang.">
+<title>She Runs The World 2026 — by HeyLocal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#cd6d87;--pink-deep:#b04a68;--pink-tab:#c05c78;--olive:#a8a76a;--ink:#2e2e2e}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:#e9e2da}
+body{font-family:'Poppins',sans-serif;color:var(--ink);background:#fff;max-width:520px;margin:0 auto;min-height:100vh;box-shadow:0 0 26px rgba(0,0,0,.12);animation:pageIn .35s ease;transition:opacity .18s ease}
+body.locked{overflow:hidden}
+body.leave{opacity:0}
+@keyframes pageIn{from{opacity:0}to{opacity:1}}
+button{font-family:inherit;cursor:pointer}
+a{text-decoration:none}
+.logo-img{height:58px;width:auto;display:block;object-fit:contain}
+.brand{display:flex;align-items:center;margin-left:4px}
+.brand-txt{display:none;flex-direction:column;line-height:.95}
+.brand-txt .b1{font-family:'Baloo 2';font-weight:800;font-size:20px;color:#d76d95;text-shadow:-1.5px -1.5px 0 #fff,1.5px -1.5px 0 #fff,-1.5px 1.5px 0 #fff,1.5px 1.5px 0 #fff}
+.yr{font-size:8.5px;background:#fff;color:#d76d95;padding:1px 4px;border-radius:4px;margin-left:3px;text-shadow:none}
+.brand-txt .b2{font-family:'Baloo 2';font-weight:800;font-size:23px;color:#a8a44e;margin-top:-3px;text-shadow:-1.5px -1.5px 0 #fff,1.5px -1.5px 0 #fff,-1.5px 1.5px 0 #fff,1.5px 1.5px 0 #fff}
+.brand-txt .b2 i{font-size:12px}
+.brand-txt .b3{font-size:6.5px;letter-spacing:3px;color:#6f2f47;margin-top:3px;text-align:center;font-weight:600}
+.topbar{position:sticky;top:0;z-index:40}
+header{background:var(--pink);display:flex;align-items:center;padding:10px 14px;gap:6px}
+.burger{background:none;border:0;display:flex;flex-direction:column;gap:5px;padding:6px}
+.burger span{width:25px;height:2.5px;border-radius:2px;background:#fff}
+.head-icons{margin-left:auto;display:flex;gap:14px;align-items:center}
+.head-icons button{background:none;border:0;padding:2px}
+.head-icons svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#searchBar{display:none;gap:8px;padding:10px 14px;background:#fbeef3}
+#searchBar.show{display:flex}
+#searchBar input{flex:1;padding:10px 14px;border:1.5px solid #e7c3d1;border-radius:22px;font-size:13.5px}
+#searchBar input:focus{outline:none;border-color:var(--pink)}
+#searchBar button{border:0;background:var(--olive);color:#fff;border-radius:22px;padding:0 16px;font-size:12.5px;font-weight:600}
+#drawer{position:fixed;top:0;left:50%;transform:translate(-50%,-105%);width:100%;max-width:520px;background:#fff;z-index:60;transition:transform .3s ease;border-radius:0 0 18px 18px;padding:22px 18px 14px;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+#drawer.open{transform:translate(-50%,0)}
+#drawer h4{font-family:'Baloo 2';color:var(--pink-deep);font-size:17px;margin-bottom:8px}
+.drawer-link{display:block;padding:13px 8px;border-bottom:1px solid #f1e3e9;color:#444;font-weight:600;font-size:14px}
+.drawer-link.active{color:var(--pink-deep)}
+.drawer-link:hover{background:#fbeef3}
+#overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:55;display:none}
+#overlay.show{display:block}
+.hero{position:relative;background:#000}
+.hero video{width:100%;height:420px;object-fit:cover;display:block}
+.logo-ov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.logo-ov img{height:190px;width:auto;max-width:80%;object-fit:contain;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+.event-info{text-align:center;padding:32px 16px 28px;background:radial-gradient(120% 130% at 12% 100%,rgba(238,236,170,.55) 0%,rgba(238,236,170,0) 55%),linear-gradient(160deg,#e9a9be 0%,#d886a0 45%,#c9688a 100%)}
+.ei-title{font-family:'Baloo 2';font-weight:800;font-size:clamp(27px,8vw,40px);color:#a8a44e;letter-spacing:1px;text-shadow:-2px -2px 0 #fff,2px -2px 0 #fff,-2px 2px 0 #fff,2px 2px 0 #fff,4px 5px 0 rgba(122,60,84,.3)}
+.ei-city{font-family:'Baloo 2';font-weight:800;font-style:italic;font-size:clamp(19px,5.4vw,26px);color:#fff;letter-spacing:4px;margin-top:2px;text-shadow:2px 2px 0 rgba(120,40,70,.35)}
+.ei-badges{display:flex;justify-content:center;gap:10px;margin-top:16px;flex-wrap:wrap}
+.badge{background:#fff;border-radius:8px;padding:7px 12px;display:flex;align-items:center;gap:7px;font-weight:700;font-size:11.5px;color:var(--pink-deep);box-shadow:0 2px 6px rgba(0,0,0,.18);text-align:left}
+.locbtn{display:flex;align-items:center;justify-content:center;gap:8px;margin:18px 16px 0;width:calc(100% - 32px);background:#fff;border:2px solid var(--olive);color:#7d7c3e;border-radius:26px;padding:12px;font-weight:700;font-size:13px}
+.locbtn:hover{background:#f6f6e8}
+.tabs{display:flex;justify-content:center;gap:8px;padding:18px 12px 4px;flex-wrap:wrap}
+.tab{border:0;background:transparent;font-weight:700;font-size:13px;letter-spacing:.4px;color:#3c3c3c;padding:13px 22px;border-radius:26px}
+.tab.active{background:var(--olive);color:#fff;box-shadow:0 3px 8px rgba(140,140,80,.35)}
+.ctabs{display:flex;justify-content:center;gap:8px;padding:10px 12px 8px;flex-wrap:wrap}
+.ctab{border:0;background:transparent;font-weight:600;font-size:13px;letter-spacing:.4px;color:#3c3c3c;padding:13px 18px;border-radius:26px}
+.ctab.active{background:var(--pink-tab);color:#fff;box-shadow:0 3px 8px rgba(192,92,120,.35)}
+.products{display:grid;grid-template-columns:1fr 1fr;gap:20px 14px;padding:16px 14px 44px}
+.card{cursor:pointer;background:#fff;border-radius:8px;box-shadow:0 2px 9px rgba(0,0,0,.08);overflow:hidden;transition:transform .15s}
+.card:active{transform:scale(.97)}
+.card-img{position:relative;aspect-ratio:4/5;overflow:hidden;background:linear-gradient(160deg,#f3cdd8 0%,#f3e2cd 55%,#efeac6 100%)}
+.card-img.c10{background:linear-gradient(150deg,#efebcb 0%,#f7f3da 55%,#eee8c2 100%)}
+.card-img img.poster{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover}
+.card-bar{position:absolute;top:0;left:0;right:0;z-index:6;background:var(--olive);color:#fff;text-align:center;font-weight:700;font-size:12px;letter-spacing:.6px;padding:9px 4px}
+.tag-stock{position:absolute;top:44px;left:0;z-index:6;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.4px;padding:5px 9px;border-radius:0 4px 4px 0}
+.tag-stock.green{background:#2e7d32}
+.tag-stock.gray{background:#9e9e9e}
+.fav{position:absolute;bottom:8px;right:8px;z-index:6;background:none;border:0}
+.fav svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.8;filter:drop-shadow(0 1px 2px rgba(0,0,0,.35))}
+.fav.active svg{fill:#e0447a;stroke:#e0447a}
+.card-title{font-size:13.5px;font-weight:600;color:#333;line-height:1.35;margin:10px 10px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card-price{margin:5px 10px 12px;color:var(--olive);font-weight:700;font-size:14.5px}
+.empty{grid-column:1/-1;text-align:center;color:#999;font-size:13px;padding:30px 0}
+.tk-wrap{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding-top:30px}
+.tstack{display:flex;flex-direction:column;align-items:center}
+.tk{display:flex;filter:drop-shadow(0 5px 5px rgba(120,90,100,.25))}
+.tk-main{width:104px;height:60px;border-radius:10px;background:linear-gradient(135deg,#f2c6d6,#e8b1c6);border:3px solid #fff;position:relative;display:flex;align-items:center;justify-content:center}
+.tk-main::before{content:"";position:absolute;inset:4px;border:1.5px dashed rgba(255,255,255,.75);border-radius:7px}
+.tk-logo{font-family:'Baloo 2';font-weight:800;color:#fff;font-size:15px;text-shadow:1.5px 1.5px 0 #d98aab}
+.tk-stub{width:24px;height:60px;margin-left:-2px;border:3px solid #fff;border-left:2px dashed #fff;border-radius:0 10px 10px 0;background:#e7aec3;display:flex;align-items:center;justify-content:center}
+.tk-stub span{writing-mode:vertical-rl;font-size:8px;font-weight:700;letter-spacing:1px;color:#fff}
+.t10row{display:flex;align-items:center;gap:8px}
+.t10{font-family:'Baloo 2';font-weight:800;font-size:38px;line-height:1;color:#e39ab5;text-shadow:2px 2px 0 #fff,-2px 2px 0 #fff,2px -2px 0 #fff,-2px -2px 0 #fff}
+.t10sub{font-family:'Baloo 2';font-weight:700;font-size:10.5px;line-height:1.25;color:#b6b377;text-transform:uppercase}
+.t10sub b{color:#e39ab5}
+footer{background:var(--pink);color:#fff;text-align:center;padding:14px;font-size:10.5px;letter-spacing:1.5px}
+#modal,#locModal{position:fixed;inset:0;z-index:80;display:none;flex-direction:column;align-items:center;justify-content:center;padding:24px;background:rgba(46,15,30,.55)}
+#modal.open,#locModal.open{display:flex}
+.modal-card{width:100%;max-width:430px;border-radius:14px;padding:30px 22px 26px;text-align:center;background:radial-gradient(120% 90% at 10% 100%,#efecb6 0%,rgba(239,236,182,0) 55%),linear-gradient(165deg,#f2cfda 0%,#e5a2b8 45%,#dd8ba7 100%);box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.modal-card .mlogo{height:150px;width:auto;max-width:100%;object-fit:contain}
+.modal-cities{display:flex;gap:16px;margin-top:20px}
+.city{flex:1}
+.city-name{font-family:'Baloo 2';font-weight:800;font-size:14px;color:#fff;line-height:1.2;text-shadow:1.5px 2px 0 rgba(150,60,95,.45)}
+.city-btn{margin-top:10px;width:100%;background:transparent;border:2px solid #fff;color:#fff;border-radius:8px;font-family:'Baloo 2';font-weight:800;font-size:11.5px;padding:8px 4px;line-height:1.3}
+.city-btn:hover{background:rgba(255,255,255,.18)}
+.modal-close,.loc-close{margin-top:24px;background:none;border:0;color:#fff;font-size:15px;font-weight:600}
+.loc-card{width:100%;max-width:460px;border-radius:14px;padding:26px 18px 20px;text-align:center;background:radial-gradient(circle,rgba(255,255,255,.5) 5px,transparent 6px) 0 0/26px 26px,linear-gradient(165deg,#f4d3de 0%,#ebaec4 45%,#e79fb8 100%);box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.loc-card .mlogo{height:120px;width:auto;max-width:100%;object-fit:contain;margin:0 auto 8px}
+.loc-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 10px;margin-top:10px}
+.loc-item{width:31%;min-width:120px}
+.loc-item h3{font-family:'Baloo 2';font-weight:800;font-size:14.5px;color:#7c2f4c;letter-spacing:.5px}
+.loc-item .d,.loc-item .v{font-size:10px;font-weight:700;color:#5c4a52;margin-top:3px}
+.loc-item .a{font-size:9.5px;color:#8a6f7a;margin-top:1px}
+#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(90px);background:#222;color:#fff;padding:11px 18px;border-radius:24px;font-size:13px;z-index:95;opacity:0;transition:.3s;max-width:88%;text-align:center}
+#toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+</style>
+</head>
+<body class="locked">
+
+<div id="overlay"></div>
+<nav id="drawer">
+  <h4>Menu</h4>
+  <a class="drawer-link active" href="index.html">🏠 Beranda</a>
+  <a class="drawer-link" href="deskripsi.html">📋 Deskripsi Tiket</a>
+  <a class="drawer-link" href="halamantarian.html">⏳ Halaman Antrean</a>
+  <a class="drawer-link" href="form.html">📝 Formulir Pendaftaran</a>
+  <a class="drawer-link" href="success.html">✅ Status Pendaftaran</a>
+</nav>
+
+<div class="topbar">
+<header>
+  <button class="burger" id="burgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  <a class="brand" href="index.html">
+    <img src="navbar1.png" alt="She Runs The World 2026 by HeyLocal" class="logo-img"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <span class="brand-txt">
+      <span class="b1">She Runs<span class="yr">2026</span></span>
+      <span class="b2"><i>the</i> World</span>
+      <span class="b3">BY HEYLOCAL</span>
+    </span>
+  </a>
+  <div class="head-icons">
+    <button id="searchBtn" aria-label="Cari"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></button>
+    <button id="locBtn" aria-label="Lokasi Event"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></button>
+    <button id="accountBtn" aria-label="Akun"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></button>
+  </div>
+</header>
+<div id="searchBar">
+  <input id="searchInput" type="search" placeholder="Cari tiket… (mis. 5K, 10K, Bundling)" autocomplete="off" enterkeyhint="search">
+  <button id="searchClose" type="button">Tutup</button>
+</div>
+</div>
+
+<section class="hero">
+  <video autoplay muted loop playsinline preload="metadata" poster="poster5k.jpg" disablepictureinpicture>
+    <source src="bener1.mp4" type="video/mp4">
+  </video>
+  <div class="logo-ov">
+    <img src="logo1.png" alt="She Runs The World 2026" onerror="this.style.display='none'">
+  </div>
+</section>
+
+<section class="event-info">
+  <div class="ei-title">SHE RUNS THE WORLD</div>
+  <div class="ei-city" id="eiCity">JAKARTA</div>
+  <div class="ei-badges">
+    <div class="badge" id="eiDate">📅 22 NOVEMBER 2026</div>
+    <div class="badge" id="eiVenue">📍 PLAZA TIMUR,<br>GELORA BUNG KARNO</div>
+  </div>
+</section>
+
+<button class="locbtn" id="locCta">📍 LOKASI &amp; TANGGAL EVENT — KETUK DI SINI</button>
+
+<div class="tabs" id="tiket">
+  <button class="tab active" data-city="JAKARTA">JAKARTA</button>
+  <button class="tab" data-city="BANDUNG">BANDUNG</button>
+  <button class="tab" data-city="JOGJA">JOGJA</button>
+  <button class="tab" data-city="SEMARANG">SEMARANG</button>
+</div>
+
+<div class="ctabs" id="catTabs">
+  <button class="ctab active" id="cat5" data-cat="5k">JAKARTA 5K FUNRUN</button>
+  <button class="ctab" id="cat10" data-cat="10k">JAKARTA 10K RUN</button>
+</div>
+
+<section class="products" id="grid"></section>
+
+<footer>© 2026 SHE RUNS THE WORLD • BY HEYLOCAL</footer>
+
+<div id="modal" class="open">
+  <div class="modal-card">
+    <img src="logo1.png" alt="She Runs The World 2026" class="mlogo" onerror="this.style.display='none'">
+    <div class="modal-cities">
+      <div class="city">
+        <div class="city-name">SRTW<br>JAKARTA</div>
+        <button class="city-btn" data-action="jakarta">5K FUN RUN<br>&amp; 10K RACE</button>
+      </div>
+      <div class="city">
+        <div class="city-name">SRTW<br>ACROSS INDONESIA</div>
+        <button class="city-btn" data-action="across">5K FUN RUN</button>
+      </div>
+    </div>
+  </div>
+  <button class="modal-close" id="modalClose">Tutup ✕</button>
+</div>
+
+<div id="locModal">
+  <div class="loc-card">
+    <img src="logo1.png" alt="She Runs The World 2026" class="mlogo" onerror="this.style.display='none'">
+    <div class="loc-grid">
+      <div class="loc-item"><h3>JAKARTA</h3><div class="d">22 NOVEMBER 2026</div><div class="v">Plaza Timur</div><div class="a">Gelora Bung Karno</div></div>
+      <div class="loc-item"><h3>MEDAN</h3><div class="d">29 NOVEMBER 2026</div><div class="v">Heylocal Store Medan</div><div class="a">Ruko OCBC No.E5/E7</div></div>
+      <div class="loc-item"><h3>YOGYAKARTA</h3><div class="d">29 NOVEMBER 2026</div><div class="v">Heylocal Store Yogyakarta</div><div class="a">Jalan C. Simanjuntak</div></div>
+      <div class="loc-item"><h3>SEMARANG</h3><div class="d">6 DESEMBER 2026</div><div class="v">23 Semarang Shopping Center</div><div class="a">&nbsp;</div></div>
+      <div class="loc-item"><h3>SUNGAI PENUH</h3><div class="d">6 DESEMBER 2026</div><div class="v">Heylocal Store Sungai Penuh</div><div class="a">Jl. Muradi No.8</div></div>
+      <div class="loc-item"><h3>BANDUNG</h3><div class="d">13 DESEMBER 2026</div><div class="v">Summarecon Mall Bandung</div><div class="a">&nbsp;</div></div>
+    </div>
+  </div>
+  <button class="loc-close" id="locClose">Tutup ✕</button>
+</div>
+
+<div id="toast"></div>
+
+<script>
+const CITIES={
+ JAKARTA:{date:"22 NOVEMBER 2026",venue:"PLAZA TIMUR, GELORA BUNG KARNO",stock:4,img5k:"poster5k.jpg",img10k:null},
+ BANDUNG:{date:"13 DESEMBER 2026",venue:"SUMMARECON MALL BANDUNG",stock:4,img5k:null,img10k:null},
+ JOGJA:{date:"29 NOVEMBER 2026",venue:"HEYLOCAL STORE YOGYAKARTA, JL. C. SIMANJUNTAK",stock:2,img5k:null,img10k:null},
+ SEMARANG:{date:"6 DESEMBER 2026",venue:"23 SEMARANG SHOPPING CENTER",stock:4,img5k:"semarang5k.png",img10k:"semarang10k.png"}
+};
+const PRICES={"5k":[369000,1089000,1799000],"10k":[419000,1239000,2077000]};
+const QTY=[1,3,5];
+const PRODUCTS={};
+Object.entries(CITIES).forEach(([city,cd])=>{
+  const pre=city.slice(0,3).toLowerCase();
+  QTY.forEach((q,j)=>{
+    const b=q>1?` BUNDLING ${q} TICKET`:"";
+    PRODUCTS[pre+"5"+q]={id:pre+"5"+q,city,cat:"5k",qty:q,label:"5K FUN RUN",title:`PRESALE 2 SRTW 5K RUN${b} (${city})`,price:PRICES["5k"][j],stock:cd.stock,img:cd.img5k};
+    PRODUCTS[pre+"10"+q]={id:pre+"10"+q,city,cat:"10k",qty:q,label:"10K RACE",title:`PRESALE 2 SRTW 10K RUN${b} (${city})`,price:PRICES["10k"][j],stock:cd.stock,img:cd.img10k};
+  });
+});
+
+const $=s=>document.querySelector(s);
+const grid=$("#grid"),searchInput=$("#searchInput"),drawer=$("#drawer"),overlay=$("#overlay");
+let activeCity="JAKARTA",activeCat="5k",navigating=false,toastTimer;
+const fmt=n=>"Rp "+n.toLocaleString("id-ID");
+
+function ticketMini(p){
+  const big=p.cat==="10k"?"10K":"5K",sub=(p.cat==="10k"?"RACE":"FUN RUN")+" REGULAR";
+  let tks="";
+  for(let i=0;i<p.qty;i++){
+    const st=p.qty===1?"transform:rotate(-8deg)":`margin:${i?`-46px 0 0 ${6+i*10}px`:"0"};transform:rotate(${-10+i*7}deg)`;
+    tks+=`<div class="tk" style="${st}"><div class="tk-main"><span class="tk-logo">SRTW</span></div><div class="tk-stub"><span>${p.label}</span></div></div>`;
+  }
+  return `<div class="tk-wrap"><div class="t10row"><span class="t10">${big}</span><span class="t10sub">${sub}<br><b>${p.qty} PERSON</b></span></div><div class="tstack">${tks}</div></div>`;
+}
+function media(p){
+  if(p.img)return `<img class="poster" src="${p.img}" alt="${p.title}" loading="lazy" decoding="async" onerror="this.remove()">`;
+  return ticketMini(p);
+}
+function cardHTML(p){
+  const low=p.stock<=2;
+  return `<article class="card" data-id="${p.id}" role="button" tabindex="0" aria-label="Lihat detail ${p.title}">
+    <div class="card-img ${p.cat==="10k"?"c10":""}">
+      <div class="card-bar">PRESALE SRTW ${p.city}</div>
+      <span class="tag-stock ${low?"gray":"green"}">${low?"STOK MENIPIS":"Stok tersedia "+p.stock}</span>
+      ${media(p)}
+      <button class="fav" type="button" aria-label="Tambah ke favorit"><svg viewBox="0 0 24 24"><path d="M12 20.5S4.5 15.6 3.2 11.4C2.3 8.5 4.2 6 6.9 6c1.9 0 3.3 1 4.1 2.4h2C13.8 7 15.2 6 17.1 6c2.7 0 4.6 2.5 3.7 5.4C19.5 15.6 12 20.5 12 20.5z"/></svg></button>
+    </div>
+    <h3 class="card-title">${p.title}</h3>
+    <div class="card-price">${fmt(p.price)}</div>
+  </article>`;
+}
+function renderGrid(){
+  const q=searchInput.value.trim().toLowerCase();
+  const list=Object.values(PRODUCTS).filter(p=>p.city===activeCity&&p.cat===activeCat&&p.title.toLowerCase().includes(q));
+  grid.innerHTML=list.map(cardHTML).join("")||`<p class="empty">Tidak ditemukan.</p>`;
+}
+
+function goTo(url){
+  if(navigating)return;
+  navigating=true;
+  document.body.classList.add("leave");
+  setTimeout(()=>{location.href=url;},180);
+}
+function openProduct(id){
+  const p=PRODUCTS[id];
+  if(!p)return;
+  try{localStorage.setItem("srtw_product",JSON.stringify(p));}catch(_){}
+  goTo(`deskripsi.html?id=${id}`);
+}
+function setCity(c,scroll){
+  activeCity=c;
+  document.querySelectorAll("#tiket .tab").forEach(b=>b.classList.toggle("active",b.dataset.city===c));
+  const cd=CITIES[c];
+  $("#eiCity").textContent=c;
+  $("#eiDate").textContent="📅 "+cd.date;
+  $("#eiVenue").innerHTML="📍 "+cd.venue.replace(", ","<br>");
+  $("#cat5").textContent=c+" 5K FUNRUN";
+  $("#cat10").textContent=c+" 10K RUN";
+  renderGrid();
+  if(scroll)$("#tiket").scrollIntoView({behavior:"smooth"});
+}
+
+function toggleDrawer(force){
+  const open=force!==undefined?force:!drawer.classList.contains("open");
+  drawer.classList.toggle("open",open);
+  overlay.classList.toggle("show",open);
+}
+function toggleSearch(){
+  const sb=$("#searchBar"),show=!sb.classList.contains("show");
+  sb.classList.toggle("show",show);
+  if(show)searchInput.focus();
+  else{searchInput.value="";renderGrid();}
+}
+function openLoc(){$("#locModal").classList.add("open");document.body.classList.add("locked");}
+function closeLoc(){$("#locModal").classList.remove("open");document.body.classList.remove("locked");}
+function closeModal(){$("#modal").classList.remove("open");document.body.classList.remove("locked");}
+function toast(msg){
+  const t=$("#toast");
+  t.textContent=msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>t.classList.remove("show"),2600);
+}
+
+grid.addEventListener("click",e=>{
+  const fav=e.target.closest(".fav");
+  if(fav){fav.classList.toggle("active");return;}
+  const card=e.target.closest(".card");
+  if(card)openProduct(card.dataset.id);
+});
+grid.addEventListener("keydown",e=>{
+  const card=e.target.closest(".card");
+  if(card&&(e.key==="Enter"||e.key===" ")){e.preventDefault();openProduct(card.dataset.id);}
+});
+ $("#tiket").addEventListener("click",e=>{const b=e.target.closest(".tab");if(b)setCity(b.dataset.city,true);});
+ $("#catTabs").addEventListener("click",e=>{
+  const b=e.target.closest(".ctab");
+  if(!b)return;
+  activeCat=b.dataset.cat;
+  document.querySelectorAll("#catTabs .ctab").forEach(x=>x.classList.toggle("active",x===b));
+  renderGrid();
+  $("#catTabs").scrollIntoView({behavior:"smooth"});
+});
+ $("#burgerBtn").addEventListener("click",()=>toggleDrawer());
+overlay.addEventListener("click",()=>toggleDrawer(false));
+ $("#searchBtn").addEventListener("click",toggleSearch);
+ $("#searchClose").addEventListener("click",toggleSearch);
+searchInput.addEventListener("input",renderGrid);
+ $("#accountBtn").addEventListener("click",()=>toast("Fitur akun segera hadir."));
+ $("#locBtn").addEventListener("click",openLoc);
+ $("#locCta").addEventListener("click",openLoc);
+ $("#locClose").addEventListener("click",closeLoc);
+ $("#modalClose").addEventListener("click",closeModal);
+document.querySelectorAll(".city-btn").forEach(btn=>btn.addEventListener("click",()=>{
+  closeModal();
+  if(btn.dataset.action==="jakarta"){setCity("JAKARTA",false);toast("SRTW Jakarta dipilih ✓");}
+  else toast("SRTW Across Indonesia — segera hadir!");
+}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){toggleDrawer(false);closeModal();closeLoc();}});
+document.querySelectorAll('a[href$=".html"]').forEach(a=>a.addEventListener("click",e=>{e.preventDefault();goTo(a.getAttribute("href"));}));
+window.addEventListener("pageshow",e=>{if(e.persisted){document.body.classList.remove("leave");navigating=false;}});
+
+setCity("JAKARTA",false);
+</script>
+</body>
+</html>
