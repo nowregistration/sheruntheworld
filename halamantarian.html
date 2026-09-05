@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#cd6d87">
+<title>Antrean Pendaftaran — She Runs The World 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#cd6d87;--pink-deep:#b04a68;--pink-tab:#c05c78}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:#e9e2da}
+body{font-family:'Poppins',sans-serif;color:#2e2e2e;background:#fff;max-width:520px;margin:0 auto;min-height:100vh;box-shadow:0 0 26px rgba(0,0,0,.12);display:flex;flex-direction:column}
+button{font-family:inherit;cursor:pointer}
+.navlogo{height:56px;width:auto;object-fit:contain}
+.brand-txt{display:none;flex-direction:column;line-height:.95}
+.brand-txt .b1{font-family:'Baloo 2';font-weight:800;font-size:19px;color:#d76d95;text-shadow:-1.5px -1.5px 0 #fff,1.5px -1.5px 0 #fff,-1.5px 1.5px 0 #fff,1.5px 1.5px 0 #fff}
+.yr{font-size:8.5px;background:#fff;color:#d76d95;padding:1px 4px;border-radius:4px;margin-left:3px}
+.brand-txt .b2{font-family:'Baloo 2';font-weight:800;font-size:22px;color:#a8a44e;margin-top:-3px;text-shadow:-1.5px -1.5px 0 #fff,1.5px -1.5px 0 #fff,-1.5px 1.5px 0 #fff,1.5px 1.5px 0 #fff}
+.brand-txt .b3{font-size:6.5px;letter-spacing:3px;color:#6f2f47;margin-top:3px;text-align:center;font-weight:600}
+.topbar{position:sticky;top:0;z-index:40;background:var(--pink);display:flex;align-items:center;padding:10px 14px;gap:8px}
+.back{background:none;border:0;color:#fff;font-size:26px;line-height:1;padding:2px 8px 2px 0}
+.wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px 20px 50px;text-align:center}
+.spin{width:56px;height:56px;border:5px solid #f0d9e2;border-top-color:var(--pink-tab);border-radius:50%;animation:sp 1s linear infinite;margin-bottom:18px}
+.spin.done{animation:none;border:5px solid #4caf50;position:relative}
+.spin.done::after{content:"✓";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:26px;font-weight:700}
+@keyframes sp{to{transform:rotate(360deg)}}
+.wrap h1{font-family:'Baloo 2';font-size:22px;color:var(--pink-deep)}
+.qnum{font-family:'Baloo 2';font-weight:800;font-size:58px;color:var(--pink-tab);line-height:1.1;margin:6px 0 2px}
+.qlabel{font-size:12.5px;color:#888}
+.countdown{margin-top:14px;font-family:'Baloo 2';font-weight:800;font-size:34px;color:var(--pink-deep);background:#fbeef3;border-radius:14px;padding:8px 28px;border:1.5px dashed var(--pink)}
+.countdown small{display:block;font-family:'Poppins';font-weight:600;font-size:10.5px;color:#a5768a;letter-spacing:1px}
+.progress{width:100%;max-width:340px;height:10px;background:#f0e6ea;border-radius:6px;overflow:hidden;margin:22px auto 8px}
+.progress i{display:block;height:100%;width:0;border-radius:6px;background:linear-gradient(90deg,#e39ab5,var(--pink-tab));transition:width .3s linear}
+.pct{font-size:12px;font-weight:600;color:var(--pink-deep)}
+.status{font-size:13.5px;color:#666;margin-top:10px;min-height:20px}
+.summary{margin-top:22px;background:#fbeef3;border:1.5px dashed var(--pink);border-radius:14px;padding:14px 18px;width:100%;max-width:340px;font-size:13px}
+.summary .row{display:flex;justify-content:space-between;gap:10px;padding:3px 0}
+.summary .row b{color:var(--pink-deep);text-align:right}
+.note{font-size:11px;color:#aaa;margin-top:16px}
+.actions{width:100%;max-width:340px;margin-top:22px;display:grid;gap:10px}
+.btn{border:0;border-radius:26px;padding:15px;font-size:14px;font-weight:700;letter-spacing:.4px}
+.btn-primary{background:var(--pink-tab);color:#fff;box-shadow:0 4px 12px rgba(192,92,120,.35)}
+.btn-primary:disabled{background:#ccc;box-shadow:none;cursor:not-allowed}
+.btn-ghost{background:#fff;color:#999;border:1.5px solid #ddd}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <button class="back" onclick="location.href='deskripsi.html'" aria-label="Kembali">←</button>
+  <a href="index.html">
+    <img src="navbar1.png" alt="She Runs The World 2026 by HeyLocal" class="navlogo"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <span class="brand-txt">
+      <span class="b1">She Runs<span class="yr">2026</span></span>
+      <span class="b2">the World</span>
+      <span class="b3">BY HEYLOCAL</span>
+    </span>
+  </a>
+</div>
+
+<div class="wrap">
+  <div class="spin" id="spinner"></div>
+  <h1>Anda Berada Dalam Antrean</h1>
+  <div class="qnum" id="qNum">#--</div>
+  <div class="qlabel">Nomor antrean Anda</div>
+
+  <div class="countdown"><span id="cd">35</span><small>DETIK TERSISA</small></div>
+
+  <div class="progress"><i id="bar"></i></div>
+  <div class="pct" id="pct">0%</div>
+  <div class="status" id="status">Menghubungkan ke server…</div>
+
+  <div class="summary">
+    <div class="row"><span>Tiket dipilih</span><b id="sTitle">-</b></div>
+    <div class="row"><span>Jumlah</span><b id="sQty">-</b></div>
+    <div class="row"><span>Total</span><b id="sPrice">-</b></div>
+  </div>
+
+  <div class="note">⚠️ Jangan menutup halaman ini sampai proses antrean selesai.</div>
+
+  <div class="actions">
+    <button class="btn btn-primary" id="btnLanjut" disabled>Mohon tunggu…</button>
+    <button class="btn btn-ghost" onclick="location.href='index.html'">Batalkan &amp; Kembali</button>
+  </div>
+</div>
+
+<script>
+const fmt=n=>"Rp "+n.toLocaleString("en-US");
+const p=JSON.parse(localStorage.getItem("srtw_product"));
+if(!p) location.replace("index.html");
+const qty=p.qtyOrder||p.qty||1, total=p.price*qty;
+
+document.getElementById("sTitle").textContent=p.title;
+document.getElementById("sQty").textContent=qty+" tiket";
+document.getElementById("sPrice").textContent=fmt(total);
+document.getElementById("qNum").textContent="#"+(Math.floor(Math.random()*40)+11);
+
+/* ================== DURASI ANTREAN: 35 DETIK ================== */
+const DUR=35000;
+let start=null;
+const bar=document.getElementById("bar"),pct=document.getElementById("pct"),
+      status=document.getElementById("status"),btn=document.getElementById("btnLanjut"),
+      spin=document.getElementById("spinner"),cd=document.getElementById("cd");
+
+function step(ts){
+  if(!start)start=ts;
+  const elapsed=ts-start;
+  const prog=Math.min(elapsed/DUR,1), pc=Math.floor(prog*100);
+  const sisa=Math.max(Math.ceil((DUR-elapsed)/1000),0);
+  cd.textContent=sisa;
+  bar.style.width=pc+"%"; pct.textContent=pc+"%";
+  status.textContent = pc<25?"Menghubungkan ke server…"
+    : pc<50?"Memeriksa ketersediaan tiket…"
+    : pc<80?"Mengalokasikan nomor pendaftaran…"
+    : pc<100?"Hampir selesai, mohon tunggu…"
+    : "Antrean selesai! Slot kamu sudah aman ✓";
+  if(prog<1) requestAnimationFrame(step);
+  else{
+    cd.textContent="0";
+    spin.classList.add("done");
+    btn.disabled=false; btn.textContent="LANJUT KE FORMULIR PENDAFTARAN →";
+    btn.onclick=()=>location.href="form.html";
+  }
+}
+requestAnimationFrame(step);
+</script>
+</body>
+</html>
