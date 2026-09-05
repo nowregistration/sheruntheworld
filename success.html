@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#4caf50">
+<title>Pendaftaran Berhasil — She Runs The World 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#cd6d87;--pink-deep:#b04a68;--pink-tab:#c05c78}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:#e9e2da}
+body{font-family:'Poppins',sans-serif;color:#2e2e2e;background:#fff;max-width:520px;margin:0 auto;min-height:100vh;box-shadow:0 0 26px rgba(0,0,0,.12);display:flex;flex-direction:column}
+button{font-family:inherit;cursor:pointer}
+.navlogo{height:56px;width:auto;object-fit:contain}
+.brand-txt{display:none;flex-direction:column;line-height:.95}
+.brand-txt .b1{font-family:'Baloo 2';font-weight:800;font-size:19px;color:#d76d95;text-shadow:-1.5px -1.5px 0 #fff,1.5px -1.5px 0 #fff,-1.5px 1.5px 0 #fff,1.5px 1.5px 0 #fff}
+.yr{font-size:8.5px;background:#fff;color:#d76d95;padding:1px 4px;border-radius:4px;margin-left:3px}
+.brand-txt .b2{font-family:'Baloo 2';font-weight:800;font-size:22px;color:#a8a44e;margin-top:-3px;text-shadow:-1.5px -1.5px 0 #fff,1.5px -1.5px 0 #fff,-1.5px 1.5px 0 #fff,1.5px 1.5px 0 #fff}
+.brand-txt .b3{font-size:6.5px;letter-spacing:3px;color:#6f2f47;margin-top:3px;text-align:center;font-weight:600}
+.topbar{background:var(--pink);display:flex;align-items:center;justify-content:center;padding:12px}
+.wrap{flex:1;text-align:center;padding:10px 20px 50px}
+.check{width:88px;height:88px;border-radius:50%;background:#4caf50;color:#fff;font-size:46px;display:flex;align-items:center;justify-content:center;margin:30px auto 16px;animation:pop .55s cubic-bezier(.2,1.6,.4,1)}
+@keyframes pop{0%{transform:scale(0)}100%{transform:scale(1)}}
+.wrap h1{font-family:'Baloo 2';font-size:24px;color:#3d8b40}
+.wrap .sub{font-size:13.5px;color:#666;margin-top:8px;line-height:1.7}
+.card{margin:24px 0 8px;background:#fbeef3;border:1.5px dashed var(--pink);border-radius:14px;padding:18px;text-align:left}
+.card .row{display:flex;justify-content:space-between;gap:12px;padding:6px 0;font-size:13.5px;border-bottom:1px dashed #ecc9d6}
+.card .row:last-child{border:0}
+.card .row span:first-child{color:#8a6272}
+.card .row span:last-child{font-weight:600;text-align:right;word-break:break-word}
+.card .row.total span:last-child{color:var(--pink-deep);font-size:15px}
+.eticket{font-size:11.5px;color:#999;margin-top:14px;line-height:1.7}
+.actions{display:grid;gap:10px;margin-top:22px}
+.btn{border:0;border-radius:26px;padding:15px;font-size:14px;font-weight:700;letter-spacing:.4px}
+.btn-primary{background:var(--pink-tab);color:#fff;box-shadow:0 4px 12px rgba(192,92,120,.35)}
+.btn-green{background:#4caf50;color:#fff;box-shadow:0 4px 12px rgba(76,175,80,.35)}
+.btn-ghost{background:#fff;color:#999;border:1.5px solid #ddd}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html">
+    <img src="navbar1.png" alt="She Runs The World 2026 by HeyLocal" class="navlogo"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <span class="brand-txt">
+      <span class="b1">She Runs<span class="yr">2026</span></span>
+      <span class="b2">the World</span>
+      <span class="b3">BY HEYLOCAL</span>
+    </span>
+  </a>
+</div>
+
+<div class="wrap">
+  <div class="check">✓</div>
+  <h1>Pendaftaran Berhasil!</h1>
+  <p class="sub" id="greet">Terima kasih telah mendaftar She Runs The World 2026.</p>
+
+  <div class="card">
+    <div class="row"><span>ID Pendaftaran</span><span id="oId">-</span></div>
+    <div class="row"><span>Nama</span><span id="oNama">-</span></div>
+    <div class="row"><span>Email</span><span id="oEmail">-</span></div>
+    <div class="row"><span>No. HP</span><span id="oTelp">-</span></div>
+    <div class="row"><span>Tiket</span><span id="oTitle">-</span></div>
+    <div class="row"><span>Jumlah</span><span id="oQty">-</span></div>
+    <div class="row"><span>Ukuran Jersey</span><span id="oSize">-</span></div>
+    <div class="row"><span>Bukti Bayar</span><span id="oBukti">-</span></div>
+    <div class="row"><span>Tanggal</span><span id="oDate">-</span></div>
+    <div class="row total"><span>Total Bayar</span><span id="oPrice">-</span></div>
+  </div>
+
+  <p class="eticket">🎫 E-ticket &amp; informasi race pack akan dikirim ke email kamu.<br>Sampai jumpa di lokasi event! 🏃‍♀️</p>
+
+  <div class="actions">
+    <button class="btn btn-green" onclick="unduh()">⬇ Unduh Bukti Pendaftaran (.txt)</button>
+    <button class="btn btn-primary" onclick="location.href='index.html'">🏠 Kembali ke Beranda</button>
+    <button class="btn btn-ghost" onclick="location.href='form.html'">📝 Daftarkan Peserta Lain</button>
+  </div>
+</div>
+
+<script>
+const fmt=n=>"Rp "+n.toLocaleString("en-US");
+const o=JSON.parse(localStorage.getItem("srtw_order"));
+if(!o) location.replace("index.html");
+const total=o.total||o.price, qty=o.qty||1;
+
+document.getElementById("greet").textContent=`Terima kasih, ${o.nama}! Pendaftaran kamu sudah kami terima & pembayaran terkonfirmasi.`;
+document.getElementById("oId").textContent=o.id;
+document.getElementById("oNama").textContent=o.nama;
+document.getElementById("oEmail").textContent=o.email;
+document.getElementById("oTelp").textContent=o.telp;
+document.getElementById("oTitle").textContent=o.title;
+document.getElementById("oQty").textContent=qty+" tiket";
+document.getElementById("oSize").textContent=o.size;
+document.getElementById("oBukti").textContent=o.bukti;
+document.getElementById("oDate").textContent=o.date;
+document.getElementById("oPrice").textContent=fmt(total);
+
+function unduh(){
+  const txt=
+`==============================================
+   BUKTI PENDAFTARAN — SHE RUNS THE WORLD 2026
+   by HeyLocal • erunstheworld.id
+==============================================
+ID Pendaftaran : ${o.id}
+Nama           : ${o.nama}
+Email          : ${o.email}
+No. HP         : ${o.telp}
+Tiket          : ${o.title}
+Jumlah         : ${qty} tiket
+Ukuran Jersey  : ${o.size}
+Bukti Bayar    : ${o.bukti}
+Total Bayar    : ${fmt(total)}
+Tanggal        : ${o.date}
+----------------------------------------------
+Tunjukkan bukti ini saat pengambilan race pack.
+RUN YOUR GOODNESS! 🏃‍♀️💕`;
+  const blob=new Blob([txt],{type:"text/plain;charset=utf-8"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download=o.id+".txt";
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+</script>
+</body>
+</html>
